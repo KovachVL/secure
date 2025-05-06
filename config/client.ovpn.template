@@ -1,0 +1,22 @@
+client
+dev tun
+proto udp
+remote YOUR_SERVER_IP 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+cipher AES-256-CBC
+verb 3
+auth-user-pass
+auth-nocache
+
+<ca>
+# Сюда нужно будет вставить содержимое CA сертификата
+</ca>
+
+<tls-auth>
+# Сюда нужно будет вставить содержимое ta.key
+</tls-auth>
+key-direction 1 
